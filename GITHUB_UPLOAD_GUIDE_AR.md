@@ -1,0 +1,31 @@
+# طريقة الرفع والبناء من GitHub Actions
+
+1. أنشئ مستودع GitHub جديدًا.
+2. ارفع **كل محتويات المشروع**، وليس ملفات الكود وحدها.
+3. تأكد أن هذا المسار ظهر داخل المستودع:
+
+```text
+.github/workflows/build.yml
+```
+
+4. افتح تبويب **Actions**.
+5. اختر **Build KiraLocket Dylib**.
+6. اضغط **Run workflow** ثم شغّل البناء.
+7. بعد ظهور العلامة الخضراء، افتح نتيجة التشغيل وانزل إلى قسم **Artifacts**.
+8. نزّل الملف الذي يبدأ اسمه بـ:
+
+```text
+KiraLocket-arm64-
+```
+
+ستجد داخله:
+
+```text
+KiraLocket.dylib
+KiraLocket.plist
+KiraLocket-Injection.zip
+BUILD_INFO.txt
+SHA256SUMS.txt
+```
+
+لا تحتاج إلى إضافة Secrets، ولا ترفع ملف IPA أو ديلب SATLocket إلى المستودع. الـAction يبني من كود مشروع KiraLocket فقط.
