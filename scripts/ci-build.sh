@@ -5,7 +5,7 @@ cd "$(dirname "$0")/.."
 
 : "${THEOS:?THEOS must point to a Theos installation}"
 
-./scripts/validate-source.sh
+bash ./scripts/validate-source.sh
 rm -rf dist
 mkdir -p dist
 

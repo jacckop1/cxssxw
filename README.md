@@ -83,3 +83,7 @@ KiraLockManager.m             LocalAuthentication lock
 KiraSettingsViewController.m  Local settings UI
 Makefile                      Theos standalone library build
 ```
+
+## GitHub web-upload compatibility
+
+The workflow does not rely on Unix executable bits being preserved. It runs the scripts through Bash and restores their executable permissions automatically, so uploading the repository from Windows or through GitHub's browser interface is supported.

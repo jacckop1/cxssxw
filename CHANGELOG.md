@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.1
+
+- Fixed GitHub Actions `Permission denied` when scripts are uploaded through the GitHub web interface or Windows.
+- The workflow now restores script permissions and invokes the build script explicitly with Bash.
+- The build script invokes source validation with Bash, so nested scripts do not depend on executable file mode.
+- Added `.gitattributes` to keep shell scripts on LF line endings.
+
 ## 1.1.0
 
 - Converted the source from a Logos-style tweak target to a standalone Theos library target.

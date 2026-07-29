@@ -72,7 +72,12 @@ jobs:
           fi
 
       - name: Build and verify dylib
-        run: ./scripts/ci-build.sh
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Files uploaded through GitHub's web interface may lose executable bits.
+          chmod +x scripts/*.sh
+          bash ./scripts/ci-build.sh
 
       - name: Upload ready files
         uses: actions/upload-artifact@v4
